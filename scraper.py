@@ -14,9 +14,6 @@ from cStringIO import StringIO
 user_agent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36'
 per_screen = '200'
 
-class NoPager(Exception):
-    pass
-
 def sleep(seconds=0.75):
     sleep_time = seconds * random.uniform(0.5, 2.0)
     time.sleep(sleep_time)
@@ -111,10 +108,9 @@ def fetch_usernames(username, category_name):
 
 def friendly_error_msg(error):
     if isinstance(error, urllib2.HTTPError) and error.code == 404:
-        print 'No user/group members discovered on this page (404). Continuing.'
+        print 'User/group doesn\'t exist (404). Skipping.'
     else:
         traceback.print_exc(limit=1)
-
 
 if __name__ == '__main__':
     username = sys.argv[1]
@@ -126,6 +122,6 @@ if __name__ == '__main__':
                 for found_username in fetch_usernames(username, category_name):
                     out_file.write(urllib.unquote(found_username)+'\n')
                     out_file.flush() # Override stupid write cache
-            except (urllib2.HTTPError, NoPager) as error:
+            except (urllib2.HTTPError) as error:
                friendly_error_msg(error)
                break

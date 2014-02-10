@@ -1,7 +1,7 @@
 myopera-username-grab
 =====================
 
-** Not setup yet on tracker, please wait to run this! **
+**Not setup yet on tracker, please wait to run this!**
 
 More information about the archiving project can be found on the [ArchiveTeam wiki page for the project](http://www.archiveteam.org/index.php?title=My_Opera)!
 

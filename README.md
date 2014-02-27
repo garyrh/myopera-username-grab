@@ -1,7 +1,9 @@
 myopera-username-grab
 =====================
 
-**Not setup yet on tracker, please wait to run this!**
+**Opera was kind of enough to provide a complete list of all non-banned usernames. So, no username crawling needed.**
+
+**On to [grabbing user content!](https://github.com/ArchiveTeam/myopera-grab)**
 
 More information about the archiving project can be found on the [ArchiveTeam wiki page for the project](http://www.archiveteam.org/index.php?title=My_Opera)!
 
